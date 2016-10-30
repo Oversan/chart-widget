@@ -1,0 +1,19 @@
+{
+  "name": "widget",
+  "version": "0.0.1",
+  "description": "Widget for displaying data.",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.dev.config.js --port 8080 --colors --hot --inline --history-api-fallback",
+    "build": "webpack --config ./webpack.dev.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anton Borsch",
+  "license": "MIT",
+  "devDependencies": {
+    "extract-text-webpack-plugin": "^1.0.1",
+    "html-webpack-plugin": "^2.24.0",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
