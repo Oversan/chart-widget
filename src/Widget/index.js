@@ -72,6 +72,9 @@ class Widget extends Component {
           verticalAlign: 'middle',
           y: 0
       },
+      tooltip: {
+          pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+      },
       plotOptions: {
         pie: {
           startAngle: -90,
@@ -86,6 +89,7 @@ class Widget extends Component {
       },
       series: [{
         type: 'pie',
+        name: 'Share',
         innerSize: '50%',
         data: data
       }]
