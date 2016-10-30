@@ -24,6 +24,7 @@ class Widget extends Component {
     this.transformData = this.transformData.bind(this)
     this.displayChart = this.displayChart.bind(this)
     this.changeType = this.changeType.bind(this)
+    this.filteredTypesList = this.filteredTypesList.bind(this)
   }
 
   toggleContent() {
@@ -32,7 +33,7 @@ class Widget extends Component {
       .then(data => {
         this.setState({
           'data': data,
-          'elements': Object.keys(data["demographic-campaign-info"][0]["VIEW"])
+          'typesList': this.filteredTypesList(data)
         })
         this.buildChart()
       })
@@ -101,6 +102,14 @@ class Widget extends Component {
     if (preparedData) {
       this.displayChart(preparedData)
     }
+  }
+
+  filteredTypesList(data) {
+    const items = data["demographic-campaign-info"][0]["VIEW"]
+    return Object.keys(items)
+      .filter(item => items[item].hasOwnProperty('other') &&
+                      items[item].hasOwnProperty('total') &&
+                      items[item].hasOwnProperty('values'))
   }
 
   changeType(e) {
