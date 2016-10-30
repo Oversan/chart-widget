@@ -5,9 +5,9 @@ import Widget from './Widget'
 const Root = (props) => {
   return (
     <div>
-      <Widget>Widget Text 1</Widget>
-      <Widget>Widget Text 2</Widget>
-      <Widget>Widget Text 3</Widget>
+      <Widget type="genders"></Widget>
+      <Widget type="deviceOsVersions">Widget Text 2</Widget>
+      <Widget type="ageRanges">Widget Text 3</Widget>
     </div>
   )
 }

@@ -1,5 +1,15 @@
-.project-name {
+.widget {
   display: inline-block;
+  min-width: 400px;
+}
+
+.select {
+  display: block;
+  text-align: center;
+}
+
+.widget-content {
+  display: block;
   margin: 30px;
   color: #000;
   text-align: center;
