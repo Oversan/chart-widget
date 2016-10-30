@@ -18,7 +18,7 @@ const NODE_ENV = process.env.NODE_ENV || 'development'
 
 var configuration = {
   entry: {
-    widget: ['./src/index.js'],
+    widget: ['whatwg-fetch', './src/index.js'],
     vendor: ["react", "react-dom", "react-css-modules", "highcharts"],
   },
   output: {

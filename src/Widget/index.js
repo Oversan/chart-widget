@@ -1,3 +1,4 @@
+import 'whatwg-fetch'
 import React, { Component, PropTypes } from 'react'
 import cssModules from 'react-css-modules'
 import styles from './style.css'
