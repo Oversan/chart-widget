@@ -30,6 +30,13 @@ var configuration = {
   devtool: 'source-map',
   debug: true,
   module: {
+    preLoaders: [
+      {
+        test: /\.jsx$|\.js$/,
+        loader: 'eslint-loader',
+        include: process.cwd() + '/src'
+      }
+    ],
     loaders: [
       {
         test: /\.jsx?$/,
