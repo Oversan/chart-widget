@@ -43,11 +43,11 @@ render(
 ```
 
 ## Developed with
-Nodejs 4.9.1
-Webpack
+- Nodejs 4.9.1
+- Webpack
 
 ## Production dependencies
-ReactJs
-CssModules
-postcss-autoreset (Full css isolation for components)
-highcharts
+- ReactJs
+- CssModules
+- postcss-autoreset (Full css isolation for components)
+- highcharts
