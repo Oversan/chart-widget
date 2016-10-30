@@ -5,8 +5,8 @@ import Widget from './Widget'
 const Root = (props) => {
   return (
     <div>
-      <Widget type="genders"></Widget>
-      <Widget type="deviceOsVersions">Widget Text 2</Widget>
+      <Widget type="genders" width="340" height="300"></Widget>
+      <Widget type="deviceOsVersions" width="340" height="300">Widget Text 2</Widget>
       <Widget type="ageRanges">Widget Text 3</Widget>
     </div>
   )

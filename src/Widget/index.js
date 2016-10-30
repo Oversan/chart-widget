@@ -15,7 +15,9 @@ class Widget extends Component {
       data: '',
       message: '',
       elements: [],
-      type: this.props.type
+      type: this.props.type,
+      widgetWidth: this.props.width || 340,
+      widgetHeight: this.props.height || 300
     }
     this.toggleContent = this.toggleContent.bind(this)
     this.buildChart = this.buildChart.bind(this)
@@ -60,6 +62,10 @@ class Widget extends Component {
   displayChart(data) {
     var widget = this.refs.widgetComponent
     var chart = Highcharts.chart(widget, {
+      chart: {
+        width: this.state.widgetWidth,
+        height: this.state.widgetHeight
+      },
       title: {
           text: camelcaseToWords(this.state.type),
           align: 'center',
