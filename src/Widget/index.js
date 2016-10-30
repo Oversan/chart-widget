@@ -14,8 +14,8 @@ class Widget extends Component {
     this.state = {
       data: '',
       message: '',
-      elements: [],
-      type: this.props.type,
+      typesList: [],
+      type: this.props.type || 'genders',
       widgetWidth: this.props.width || 340,
       widgetHeight: this.props.height || 300
     }
@@ -126,7 +126,7 @@ class Widget extends Component {
       <div styleName="widget">
         <div styleName="select">
           <select onChange={this.changeType} value={this.state.type}>
-            {this.state.elements.map(
+            {this.state.typesList.map(
               (item, i) => <option key={i} value={item}> {item} </option>
             )}
           </select>
